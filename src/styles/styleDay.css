@@ -13,11 +13,11 @@
 }
 .body__day::-webkit-scrollbar{
   width: 1rem;
-  z-index: 11;
 }
 .body__day::-webkit-scrollbar-thumb{
-  background: #efefef;
-  backdrop-filter: blur(20px);
+  background: #CAEDFF;
+border-radius: 100vh;
+box-shadow: 0 0 10px rgba(255,255,255,.6);
 }
 /* ------------------------------------------------------------------------------------- */
 /* navbar day */
@@ -26,6 +26,11 @@
   box-shadow: 0 0 10px rgba(0,0,0,.6);
   color: white;
   border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 1rem;
 }
 /* ------------------------------------------------------------------------------------- */
 /*  colores de las cards de los usuarios */
@@ -33,5 +38,5 @@
   box-shadow: 0 0 10px rgba(0,0,0,.6);
   background: transparent;
   backdrop-filter: blur(20px);
-  color: lavender;
+  color: white;
 }

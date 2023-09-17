@@ -7,18 +7,6 @@
 }
 /* ----------------------------------------------------------------------------------- */
 /* navbar */
-.navbar__general nav {
-  width: 100%;
-  height: 80px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-  /* z-index: 10; */
-}
 .navbar__infoSwitchInput {
   display: flex;
   align-items: center;
@@ -67,11 +55,13 @@
 /* ----------------------------------------------------------------------------------- */
 /* usuarios */
 .user_init{  
+  z-index: 5;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
   max-width: 70%;
   margin: 0 auto;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 .user__general article{
   padding: 1rem;
@@ -108,3 +98,12 @@
   height: 100vh;
 }
 /* ----------------------------------------------------------------------------------- */
+/* switch */
+.switch{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.switch__icon{
+  font-size: 1.5rem;
+}

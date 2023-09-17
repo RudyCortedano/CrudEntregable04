@@ -5,7 +5,8 @@ import { CrudContext } from "../context/CrudContext";
 const Switch = () => {
   const {checked,handleChecked} = useContext(CrudContext)
   return (
-    <div>
+    <div className="switch">
+      <span className="switch__icon"><i className="fa-solid fa-sun" style={{color: checked ? "white" : "#dbbb1f"}}></i></span>
       <label htmlFor="material-switch">
         <ReactSwitch
           checked={checked}
@@ -23,6 +24,7 @@ const Switch = () => {
           id="material-switch"
         />
       </label>
+      <span className="switch__icon"><i className="fa-solid fa-moon" style={{color: checked ? " #a60dc5" : "white"}}></i></span>
     </div>
   );
 };

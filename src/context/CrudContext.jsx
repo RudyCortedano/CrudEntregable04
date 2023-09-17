@@ -27,14 +27,16 @@ const CrudProvider = (props) => {
   return (
     <CrudContext.Provider
       value={{
+        // componente Users
         users,
-        getUsers,
+        loading,
+        // componente: FormUsers
         createUser,
-        deleteUsers,
         updateUsers,
         updateInfo,
-        setUpdateInfo,
-        loading,
+        setUpdateInfo, 
+        // componente CardUser
+        deleteUsers,
         // componente: switch
         checked,
         handleChecked,

@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------------------------------- */
+/* estilos generales day */
+.body__day{
+  background-image: url(https://fondosmil.com/fondo/2257.jpg);
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  color: #000;
+}
+.body__day::-webkit-scrollbar{
+  width: 1rem;
+  z-index: 11;
+}
+.body__day::-webkit-scrollbar-thumb{
+  background: #efefef;
+  backdrop-filter: blur(20px);
+}
+/* ------------------------------------------------------------------------------------- */
+/* navbar day */
+.navbar__day{
+  background: rgba(0,0,0,.6);
+  box-shadow: 0 0 10px rgba(0,0,0,.6);
+  color: white;
+  border-bottom: 1px solid #fff;
+}
+/* ------------------------------------------------------------------------------------- */
+/*  colores de las cards de los usuarios */
+.user__day{
+  box-shadow: 0 0 10px rgba(0,0,0,.6);
+  background: transparent;
+  backdrop-filter: blur(20px);
+  color: lavender;
+}

@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------------------------------- */
+/* estilos generales nigth*/
+.body__nigth{
+  background-image: url(https://lastrafoto.com/wp-content/uploads/2019/07/NOC03_full-1.jpg);
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  color: white;
+}
+.body__nigth::-webkit-scrollbar{
+  width: 1rem;
+  z-index: 11;
+}
+.body__nigth::-webkit-scrollbar-thumb{
+  background: #efefef;
+  backdrop-filter: blur(20px);
+}
+/* ------------------------------------------------------------------------------------- */
+/* navbar nigth */
+.navbar__night{
+  background: rgba(0,0,0,.6);
+  box-shadow: 0 0 10px rgba(255,255,255,.6);
+  color: white;
+  border-bottom: 1px solid #fff;
+}
+/* ------------------------------------------------------------------------------------- */
+/*  colores de las cards de los usuarios */
+.user__nigth{
+  box-shadow: 0 0 10px rgba(255,255,255,.6);
+  background: rgba(0,0,0,.4);
+  backdrop-filter: blur(10px);
+  color: white;  
+}

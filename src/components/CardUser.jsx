@@ -21,7 +21,9 @@ const CardUser = ({user}) => {
           <li className="user__item"><strong>Birthday: </strong><span>{user.birthday}</span></li>
         </ul>
         <div className="user__button">
-          <button className='user__buttonEdit' onClick={handleEdit}><i className="fa-solid fa-pen-to-square"></i></button>
+          <label htmlFor="check">
+            <span className='user__buttonEdit' onClick={handleEdit}><i className="fa-solid fa-pen-to-square"></i></span>
+          </label>
           <button className='user__buttonDelete' onClick={handleDelete}><i className="fa-solid fa-trash-can"></i></button>
         </div>
       </article>

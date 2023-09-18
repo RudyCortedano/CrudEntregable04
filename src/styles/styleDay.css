@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------------------------- */
 /* estilos generales day */
-.body__day{
+.body__day {
   background-image: url(https://fondosmil.com/fondo/2257.jpg);
   background-size: cover;
   background-position: 0 0;
@@ -11,31 +11,50 @@
   overflow-y: scroll;
   color: #000;
 }
-.body__day::-webkit-scrollbar{
+.body__day::-webkit-scrollbar {
   width: 1rem;
 }
-.body__day::-webkit-scrollbar-thumb{
-  background: #CAEDFF;
-border-radius: 100vh;
-box-shadow: 0 0 10px rgba(255,255,255,.6);
+.body__day::-webkit-scrollbar-thumb {
+  background: #caedff;
+  border-radius: 100vh;
 }
 /* ------------------------------------------------------------------------------------- */
 /* navbar day */
-.navbar__day{
-  background: rgba(0,0,0,.6);
-  box-shadow: 0 0 10px rgba(0,0,0,.6);
+.navbar__day {
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   color: white;
   border-bottom: 1px solid #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  padding: 0 1rem;
+  height: 70px;
+  padding: 0 3rem;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.navbar__btnDay {
+  padding: 0.3rem 1rem;
+  border-radius: 0.3rem;
+  background: #4e4feb;
+  cursor: pointer;
+}
+/* ------------------------------------------------------------------------------------- */
+/* form__day */
+.form__day {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  margin: 0 auto;
+  width: fit-content;
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 /* ------------------------------------------------------------------------------------- */
 /*  colores de las cards de los usuarios */
-.user__day{
-  box-shadow: 0 0 10px rgba(0,0,0,.6);
+.user__day {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   background: transparent;
   backdrop-filter: blur(20px);
   color: white;

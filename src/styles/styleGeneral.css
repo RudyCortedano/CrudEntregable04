@@ -10,6 +10,7 @@
 .navbar__infoSwitchInput {
   display: flex;
   align-items: center;
+  gap: 2rem;
 }
 .navbar__list {
   display: flex;
@@ -17,26 +18,56 @@
   list-style: none;
 }
 /* ----------------------------------------------------------------------------------- */
-/* formulario */
-.form__global{
-  margin-top: 7rem;
+/* formulario modal*/
+.checkModal {
+  display: none;
 }
-.form__global form{
-  background: rgba(255,255,255,.6);
-  backdrop-filter: blur(20px);
+.form__modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+}
+.checkModal:checked ~ .form__modal {
+  display: flex;
+}
+.form__exit {
+  display: flex;
+  justify-content: flex-end;
+}
+.form__exit__style {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+}
+.exit__modal {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  backdrop-filter: blur(5px);
+}
+.form__global {
+  margin-top: 2rem;
+}
+.form__global form {
   margin: 2rem auto;
   width: fit-content;
-  display: flex;
   flex-direction: column;
   padding: 1rem;
   border-radius: 0.5rem;
 }
-.form__global label{
+.form__global label {
   display: block;
 }
-.form__global input{
+.form__global input {
   width: 300px;
-  outline: none;  
+  outline: none;
   border: none;
   padding: 0.2rem 0.3rem;
   border-radius: 0.3rem;
@@ -45,7 +76,7 @@
   text-align: center;
   margin-top: 0.5rem;
 }
-.form__button button{
+.form__button button {
   background: #000;
   color: white;
   padding: 0.3rem 0.5rem;
@@ -54,56 +85,64 @@
 }
 /* ----------------------------------------------------------------------------------- */
 /* usuarios */
-.user_init{  
+.user_init {
+  width: 100%;
   z-index: 5;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   max-width: 70%;
   margin: 0 auto;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 5rem;
 }
-.user__general article{
+.user__general article {
   padding: 1rem;
 }
-.user__list{
+.user__list {
   list-style: none;
 }
-.user__item{
+.user__item {
   margin: 0.1rem 0;
 }
-.user__button{
+.user__button {
   text-align: right;
   margin-top: 1rem;
 }
-.user__button button{
+.user__button button {
   padding: 0.3rem 1rem;
-  margin: 0 .2rem;
+  margin: 0 0.2rem;
   border: none;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   color: white;
   cursor: pointer;
 }
-.user__buttonEdit{
+.user__buttonEdit {
   background: #004225;
+  padding: 0.3rem 1rem;
+  margin: 0 0.2rem;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  cursor: pointer;
 }
-.user__buttonDelete{
+.user__buttonDelete {
   background: red;
 }
 /* ----------------------------------------------------------------------------------- */
 /* spinner de carga */
-.spinner__global{
+.spinner__global {
   display: grid;
   place-content: center;
   height: 100vh;
 }
 /* ----------------------------------------------------------------------------------- */
 /* switch */
-.switch{
+.switch {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.switch__icon{
+.switch__icon {
   font-size: 1.5rem;
 }

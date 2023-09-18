@@ -5,12 +5,12 @@ import CardUser from './CardUser'
 const Users = () => {
   const {users} = useContext(CrudContext)
   return (
-    <div className="user_init">
-    {
-      users?.map(user =>(
-        <CardUser user={user} key={user.id}/>
-      ))
-    }
+    <div className="user_init">      
+        {
+          users?.map(user =>(
+            <CardUser user={user} key={user.id}/>
+          ))
+        }  
 </div>
   )
 }

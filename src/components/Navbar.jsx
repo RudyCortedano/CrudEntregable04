@@ -19,7 +19,11 @@ const Navbar = () => {
           <div className="navbar__switch">
             <Switch />
           </div>
-          <div className="navbar__search"></div>
+          <label htmlFor="check">
+            <span className={checked ? "navbar__btnNigth" : "navbar__btnDay"}>
+              ADD
+            </span>
+          </label>
         </div>
       </nav>
     </div>

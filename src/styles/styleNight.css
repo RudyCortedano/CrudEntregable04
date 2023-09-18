@@ -17,7 +17,6 @@
 .body__nigth::-webkit-scrollbar-thumb{
   background: #B39CD0;
   border-radius: 100vh;
-  box-shadow: 0 0 10px rgba(255,255,255,.6);
 }
 /* ------------------------------------------------------------------------------------- */
 /* navbar nigth */
@@ -29,8 +28,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  padding: 0 1rem;
+  height: 70px;
+  padding: 0 3rem;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.navbar__btnNigth{
+  padding: 0.3rem 1rem;
+  border-radius: 0.3rem;
+  background: darkslateblue;
+  cursor: pointer;
+}
+/* ------------------------------------------------------------------------------------- */
+/* form__nigth */
+.form__night{
+  background: rgba(0,0,0,.3);
+  backdrop-filter: blur(20px);
+  margin: 0 auto;
+  width: fit-content;
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(255,255,255,.6);
 }
 /* ------------------------------------------------------------------------------------- */
 /*  colores de las cards de los usuarios */

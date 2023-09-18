@@ -3,7 +3,7 @@ import Switch from "../switch/Switch";
 import { CrudContext } from "../context/CrudContext";
 
 const Navbar = () => {
-  const {checked} = useContext(CrudContext)
+  const {checked, handleCancel} = useContext(CrudContext)
   return (
     <div className="navbar__general">
       <nav className={checked ? "navbar__night" : "navbar__day"}>
@@ -20,7 +20,7 @@ const Navbar = () => {
             <Switch />
           </div>
           <label htmlFor="check">
-            <span className={checked ? "navbar__btnNigth" : "navbar__btnDay"}>
+            <span onClick={handleCancel} className={checked ? "navbar__btnNigth" : "navbar__btnDay"}>
               ADD
             </span>
           </label>

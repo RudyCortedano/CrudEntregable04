@@ -2,13 +2,14 @@ import React, { useContext } from 'react'
 import { CrudContext } from '../context/CrudContext'
 
 const CardUser = ({user}) => {
-  const {deleteUsers, setUpdateInfo, checked} = useContext(CrudContext)
+  const {deleteUsers, setUpdateInfo, checked, reset} = useContext(CrudContext)
 
   const handleDelete = () =>{
     deleteUsers('/users',user.id)    
   }
   const handleEdit = () =>{
-    setUpdateInfo(user)
+    reset(user)
+    // setUpdateInfo(user)
   }
   return (
     <div className="user__general">

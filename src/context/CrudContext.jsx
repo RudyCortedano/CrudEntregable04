@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import useFetch from "../hooks/useFetch";
+import { useForm } from "react-hook-form";
 
 export const CrudContext = createContext();
 
@@ -15,6 +16,18 @@ const CrudProvider = (props) => {
   }, []);
   console.log(users)
   // -------------------------------------------------------------------------------------------------//
+  // logica del formulario
+  const {register, handleSubmit, reset} = useForm()
+  const handleCancel = () =>{
+    reset({
+      email: '',
+      password: '',
+      first_name: '',
+      last_name: '',
+      birthday: '',
+    })     
+  }
+  // -------------------------------------------------------------------------------------------------//
   // logica del modo nocturno
   const [checked, setChecked] = useState(false);
   
@@ -27,6 +40,7 @@ const CrudProvider = (props) => {
   return (
     <CrudContext.Provider
       value={{
+        reset, 
         // componente Users
         users,
         loading,
@@ -35,6 +49,9 @@ const CrudProvider = (props) => {
         updateUsers,
         updateInfo,
         setUpdateInfo, 
+        register,
+        handleSubmit,
+        handleCancel,
         // componente CardUser
         deleteUsers,
         // componente: switch

@@ -4,9 +4,7 @@ import { CrudContext } from "../context/CrudContext";
 
 const FormUsers = () => {
 
-  const { createUser, updateInfo, updateUsers, setUpdateInfo, checked} = useContext(CrudContext)
-
-  const {register, handleSubmit, reset} = useForm()
+  const { createUser, updateInfo, updateUsers, setUpdateInfo, checked, register, handleSubmit,handleCancel,reset} = useContext(CrudContext)
 
   useEffect (() => {
     reset(updateInfo)
@@ -28,16 +26,6 @@ const FormUsers = () => {
       birthday: '',
     })
   }  
-
-  const handleCancel = () =>{
-    reset({
-      email: '',
-      password: '',
-      first_name: '',
-      last_name: '',
-      birthday: '',
-    })
-  }
   return (
     <>
       <input type="checkbox"  className="checkModal" id="check"/>    
@@ -45,7 +33,7 @@ const FormUsers = () => {
         <div className="form__global">
           <form className={checked ? "form__night" : "form__day"} onSubmit={handleSubmit(submit)}>
             <div className="form__exit">
-              <label onClick={handleCancel} className="form__exit__style" htmlFor="check"><i className="fa-solid fa-xmark"></i></label>
+              <label className="form__exit__style" htmlFor="check"><i className="fa-solid fa-xmark"></i></label>
             </div>
             <div>
               <label htmlFor="email">Email</label>
@@ -73,7 +61,7 @@ const FormUsers = () => {
             </div>
           </form>
         </div> 
-        <label onClick={handleCancel} htmlFor="check" className="exit__modal"></label>   
+        <label htmlFor="check" className="exit__modal"></label>   
       </header>
     </>
   );

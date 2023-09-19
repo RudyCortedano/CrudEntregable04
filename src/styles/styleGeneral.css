@@ -7,10 +7,17 @@
 }
 /* ----------------------------------------------------------------------------------- */
 /* navbar */
+.navbar__logo{
+  font-size: 1.5rem;
+  transition: .3s;
+}
+.navbar__logo:active{
+  transform: scale(1.2);
+}
 .navbar__infoSwitchInput {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 .navbar__list {
   display: flex;
@@ -77,11 +84,18 @@
   margin-top: 0.5rem;
 }
 .form__button button {
-  background: #000;
   color: white;
   padding: 0.3rem 0.5rem;
   border-radius: 0.3rem;
   cursor: pointer;
+  margin: 0 .2rem;
+  border: none;
+}
+.form__btnUpdate{
+  background: #ACBCFF;
+}
+.form__btnReset{
+  background: #FC4F00;
 }
 /* ----------------------------------------------------------------------------------- */
 /* usuarios */
@@ -93,8 +107,8 @@
   max-width: 70%;
   margin: 0 auto;
   gap: 1rem;
-  margin-top: 6rem;
-  margin-bottom: 5rem;
+  margin-top: 7rem;
+  /* margin-bottom: 1rem; */
 }
 .user__general article {
   padding: 1rem;
@@ -104,6 +118,19 @@
 }
 .user__item {
   margin: 0.1rem 0;
+}
+.user__form{
+  display: block;
+  color: lavender;  
+}
+.user__name{
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+.user__bold{
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-left: 0.3rem;
 }
 .user__button {
   text-align: right;
@@ -129,6 +156,9 @@
 .user__buttonDelete {
   background: red;
 }
+.user__bottom{
+  border-bottom: 1px solid #efefef7a;
+}
 /* ----------------------------------------------------------------------------------- */
 /* spinner de carga */
 .spinner__global {
@@ -144,5 +174,6 @@
   gap: 0.5rem;
 }
 .switch__icon {
-  font-size: 1.5rem;
+  font-size: 1.5rem;  
 }
+/* ----------------------------------------------------------------------------------- */

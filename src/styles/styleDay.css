@@ -35,10 +35,15 @@
   z-index: 3;
 }
 .navbar__btnDay {
-  padding: 0.3rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 0.3rem;
   background: #4e4feb;
   cursor: pointer;
+  transition: 0.3s;
+}
+.navbar__btnDay:hover {
+  background: #45cfdd;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #fff;
 }
 /* ------------------------------------------------------------------------------------- */
 /* form__day */
@@ -61,11 +66,33 @@
 }
 /* ------------------------------------------------------------------------------------- */
 /*  paginacion day */
-.buttonPaginate__day button{
-  padding: 0 1.5rem;
+.buttonPaginate__day button {
+  padding: 0 1rem;
+  margin: 0 0.2rem;
   background: transparent;
-  backdrop-filter: blur(25px);
-  box-shadow: 0 0 10px rgba(0,0,0,.6);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #fff;
   margin-bottom: 3rem;
-  color: white;
+  color: White;
+  font-weight: bold;
+  margin-top: 7rem;
+  transition: 0.3s;
+}
+.buttonPaginate__day button:active {
+  transform: scale(0.8);
+}
+@media (max-width: 800px) {
+  .body__day::-webkit-scrollbar {
+    width: 0;
+  }
+}
+@media (max-width: 500px) {
+  .navbar__day{
+    justify-content: space-evenly;
+  }
+  .buttonPaginate__day button {
+    padding: 0 0.8rem;
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+  }
 }

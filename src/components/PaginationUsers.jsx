@@ -4,35 +4,26 @@ import { useContext } from "react";
 import { CrudContext } from "../context/CrudContext";
 
 const PaginationUsers = () => {
-  const {users,checked,pageCount, handleChange,prueba, prueba2,pageCount2} = useContext(CrudContext)
-
-  if(prueba2){
-    pageCount-1
-  }
+  const {checked,pageCount, handleChange,countPaginate} = useContext(CrudContext)
 
   return (
     <>
-    {
-      // prueba ? (
-        <div className={checked ? "buttonPaginate__nigth" : "buttonPaginate__day"}>
-          <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
-            <div className="pagination__home">
-              <Pagination
-                variant="outlined"
-                count={prueba ?  pageCount : pageCount2}
-                onChange={handleChange}
-                size="large"
-                siblingCount={2}
-                boundaryCount={2}
-              />
-            </div>
-          </Box>
-        </div>
-      // ) : (
-      //   <h1> <a href="/">Regresar</a></h1>            
-      // )     
-    }
-
+      {
+        countPaginate && (
+          <div className={checked ? "buttonPaginate__nigth" : "buttonPaginate__day"}>
+            <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
+              <div className="pagination__home">
+                <Pagination
+                  variant="outlined"
+                  count={pageCount}
+                  onChange={handleChange}
+                  size="small"               
+                />
+              </div>
+            </Box>
+          </div>
+        ) 
+      }
     </>
   );
 };

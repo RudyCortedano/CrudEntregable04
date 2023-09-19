@@ -16,12 +16,12 @@ const CardUser = ({user}) => {
     <div className="user__general">
       <article className={checked ? "user__nigth" : "user__day"}>
         <ul className="user__list">
-          <li className="user__item"><strong>Email: </strong><span>{user.email}</span></li>
-          <li className="user__item"><strong>Password: </strong><span>{user.password}</span></li>
-          <li className="user__item"><strong>First name: </strong><span>{user.first_name}</span></li>
-          <li className="user__item"><strong>Last name: </strong><span>{user.last_name}</span></li>
-          <li className="user__item"><strong>Birthday: </strong><span>{user.birthday}</span></li>
+          <li className="user__item user__bottom" ><h3 className='user__name'>{user.first_name} {user.last_name}</h3></li>         
+          <li className="user__item"><span className='user__form'>Email: </span><span className='user__bold'>{user.email}</span></li>
+          <li className="user__item"><span className='user__form'>Password: </span><span className='user__bold'>{user.password}</span></li>
+          <li className="user__item user__bottom">< span className='user__form'>Birthday: </span><span className='user__bold'>{user.birthday}</span></li>
         </ul>
+     
         <div className="user__button">
           <label htmlFor="check">
             <span className='user__buttonEdit' onClick={handleEdit}><i className="fa-solid fa-pen-to-square"></i></span>

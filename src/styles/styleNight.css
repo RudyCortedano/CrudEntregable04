@@ -20,7 +20,7 @@
 }
 /* ------------------------------------------------------------------------------------- */
 /* navbar nigth */
-.navbar__night{
+.navbar__nigth{
   background: rgba(0,0,0,.6);
   box-shadow: 0 0 10px rgba(255,255,255,.6);
   color: white;
@@ -35,10 +35,15 @@
   z-index: 3;
 }
 .navbar__btnNigth{
-  padding: 0.3rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 0.3rem;
   background: darkslateblue;
   cursor: pointer;
+  transition: .3s;
+}
+.navbar__btnNigth:hover{  
+  background: #B39CD0;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #fff;
 }
 /* ------------------------------------------------------------------------------------- */
 /* form__nigth */
@@ -62,10 +67,32 @@
 /* ------------------------------------------------------------------------------------- */
 /*  paginacion day */
 .buttonPaginate__nigth button{
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+  margin: 0 .2rem;
   background: rgba(255,255,255,.6);
-  box-shadow: 0 0 10px rgba(255,255,255,.6);
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #fff;
   backdrop-filter: blur(25px);
   margin-bottom: 3rem;
   color: white;
+  font-weight: bold;
+  margin-top: 7rem;
+  transition: .3s;
+}
+.buttonPaginate__nigth button:active{
+  transform: scale(0.8);
+}
+@media (max-width: 800px) {
+  .body__nigth::-webkit-scrollbar {
+    width: 0;
+  }
+}
+@media(max-width: 500px){
+  .navbar__nigth{
+    justify-content: space-evenly;
+  }
+  .buttonPaginate__nigth button{
+    padding: 0 0.8rem;
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+  }
 }

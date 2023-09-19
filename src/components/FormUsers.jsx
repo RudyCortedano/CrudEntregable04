@@ -53,14 +53,6 @@ const FormUsers = () => {
               <label className="form__exit__style" htmlFor="check"><i className="fa-solid fa-xmark"></i></label>
             </div>
             <div>
-              <label htmlFor="email">Email</label>
-              <input required {...register("email")} type="text" id="email" />
-            </div>
-            <div>
-              <label htmlFor="password">Password</label>
-              <input required {...register("password")} type="password" id="password" />
-            </div>
-            <div>
               <label htmlFor="first_name">First name</label>
               <input required {...register("first_name")} type="text" id="first_name" />
             </div>
@@ -68,13 +60,21 @@ const FormUsers = () => {
               <label htmlFor="last_name">Last name</label>
               <input required {...register("last_name")} type="text" id="last_name" />
             </div>
+            <div>
+              <label htmlFor="email">Email</label>
+              <input required {...register("email")} type="text" id="email" />
+            </div>
+            <div>
+              <label htmlFor="password">Password</label>
+              <input required {...register("password")} type="password" id="password" />
+            </div>         
             <div>    
               <label htmlFor="birthday">Birthday</label>
               <input required {...register("birthday")} type="date" id="birthday" />
             </div>
             <div className="form__button">
-              <button>{updateInfo ? "Update" : "Create"}</button>
-              <button  onClick={handleCancel}>Reset</button>
+              <button className="form__btnUpdate">{updateInfo ? "Update" : "Create"}</button>
+              <button className="form__btnReset"  onClick={handleCancel}>Reset</button>
             </div>
           </form>
         </div> 

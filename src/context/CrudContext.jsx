@@ -15,13 +15,21 @@ const CrudProvider = (props) => {
   useEffect(() => {
     getUsers("/users/");
   }, []);
-  console.log(users);
   // -------------------------------------------------------------------------------------------------//
   //  usaremos el reset globalmente para llenar los campos con la informacion ya que updateInfo
   //  presento un bug de dejar vacio los campos cuando entras para editar reseteas los campos
   //  te sales del formulario-modal dejandolo vacio y vuelves a editar el mismo usuario.
   const { register, handleSubmit, reset } = useForm();
-
+  const handleCancelReset = () =>{
+    setUpdateInfo()
+    reset({      
+      email: '',
+      password: '',
+      first_name: '',
+      last_name: '',
+      birthday: '',
+    })     
+  }
   // -------------------------------------------------------------------------------------------------//
   // logica del modo nocturno
   const [checked, setChecked] = useState(false);
@@ -31,14 +39,13 @@ const CrudProvider = (props) => {
   };
   // -------------------------------------------------------------------------------------------------//
   // logica del paginado
-  const itemsPerPage = 5;
+  const itemsPerPage = 8;
 
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
 
   const currentItems = users?.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(users?.length / itemsPerPage);
-  const pageCount2 = Math.round(users?.length / itemsPerPage);
+  const pageCount = Math.ceil(users?.length / itemsPerPage); 
 
   const handleChange = (event, value) => {
     const value2 = value - 1;
@@ -46,17 +53,18 @@ const CrudProvider = (props) => {
 
     setItemOffset(newOffset);
   };
-  const prueba = users?.length > itemsPerPage;
-  const prueba2 = users?.length === itemsPerPage;
+  const countPaginate = users?.length >=  itemsPerPage;  
   // -------------------------------------------------------------------------------------------------//
   return (
     <CrudContext.Provider
       value={{
+        // componente: navbar     
+        handleCancelReset,
         // componente: card
         reset,
         // componente: Users
         currentItems,
-        loading,
+        loading,            
         // componente: FormUsers
         createUser,
         updateUsers,
@@ -72,9 +80,7 @@ const CrudProvider = (props) => {
         // componente: paginateusers
         pageCount,
         handleChange,
-        prueba,
-        prueba2,
-        pageCount2,
+        countPaginate,           
       }}
     >
       {props.children}

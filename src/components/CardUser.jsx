@@ -2,12 +2,8 @@ import React, { useContext } from 'react'
 import { CrudContext } from '../context/CrudContext'
 
 const CardUser = ({user}) => {
-  const {deleteUsers, setUpdateInfo, checked, reset, setUserID} = useContext(CrudContext)
+  const {setUpdateInfo, checked, reset, setUserID} = useContext(CrudContext)
 
-  // const handleDelete = () =>{
-  //   deleteUsers('/users',user.id)   
-  //   setUpdateInfo() 
-  // }
   const deleteID = () =>{
     setUserID(user.id)
   }

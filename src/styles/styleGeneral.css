@@ -180,12 +180,13 @@
   border: 1px solid #fff;
   text-align: center;
 }
-.modal__exit__position{
+.modal__exit__position {
   text-align: right;
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
-.modal__exitBtn{
+.modal__exitBtn {
   font-size: 1.5rem;
+  cursor: pointer;
 }
 .modalDelete:checked ~ .modal__delete {
   display: flex;

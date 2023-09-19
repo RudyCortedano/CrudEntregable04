@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Users from './Users'
 import { CrudContext } from '../context/CrudContext'
 import Spinner from '../spinner/Spinner'
+import PaginationUsers from './PaginationUsers'
 
 const Home = () => {
   const {checked, loading} = useContext(CrudContext)
@@ -17,6 +18,7 @@ const Home = () => {
       <Navbar/>
       <FormUsers/>
       <Users/>
+      <PaginationUsers/>
     </div>
   )
 }

@@ -1,10 +1,17 @@
 import React, { useContext, useEffect } from "react";
-import { useForm } from "react-hook-form";
 import { CrudContext } from "../context/CrudContext";
 
 const FormUsers = () => {
 
-  const { createUser, updateInfo, updateUsers, setUpdateInfo, checked, register, handleSubmit,handleCancel,reset} = useContext(CrudContext)
+  const {
+    updateInfo,
+    setUpdateInfo, 
+    checked, register, 
+    handleSubmit,    
+    reset,
+    updateUsers, 
+    createUser
+  } = useContext(CrudContext)
 
   useEffect (() => {
     reset(updateInfo)
@@ -26,6 +33,16 @@ const FormUsers = () => {
       birthday: '',
     })
   }  
+  const handleCancel = () =>{
+    reset({
+      email: '',
+      password: '',
+      first_name: '',
+      last_name: '',
+      birthday: '',
+    })     
+  }
+  
   return (
     <>
       <input type="checkbox"  className="checkModal" id="check"/>    

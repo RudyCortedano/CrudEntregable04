@@ -59,3 +59,13 @@
   backdrop-filter: blur(20px);
   color: white;
 }
+/* ------------------------------------------------------------------------------------- */
+/*  paginacion day */
+.buttonPaginate__day button{
+  padding: 0 1.5rem;
+  background: transparent;
+  backdrop-filter: blur(25px);
+  box-shadow: 0 0 10px rgba(0,0,0,.6);
+  margin-bottom: 3rem;
+  color: white;
+}

@@ -5,11 +5,12 @@ const CardUser = ({user}) => {
   const {deleteUsers, setUpdateInfo, checked, reset} = useContext(CrudContext)
 
   const handleDelete = () =>{
-    deleteUsers('/users',user.id)    
+    deleteUsers('/users',user.id)   
+    setUpdateInfo() 
   }
   const handleEdit = () =>{
     reset(user)
-    // setUpdateInfo(user)
+    setUpdateInfo(user)
   }
   return (
     <div className="user__general">

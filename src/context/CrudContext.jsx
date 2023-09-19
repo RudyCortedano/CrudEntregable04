@@ -20,6 +20,13 @@ const CrudProvider = (props) => {
   //  presento un bug de dejar vacio los campos cuando entras para editar reseteas los campos
   //  te sales del formulario-modal dejandolo vacio y vuelves a editar el mismo usuario.
   const { register, handleSubmit, reset } = useForm();
+  const [userID, setUserID] = useState()
+
+  const handleDelete = () =>{
+    deleteUsers('/users',userID)   
+    setUpdateInfo() 
+  }
+
   const handleCancelReset = () =>{
     setUpdateInfo()
     reset({      
@@ -62,7 +69,9 @@ const CrudProvider = (props) => {
         handleCancelReset,
         // componente: card
         reset,
+        setUserID,
         // componente: Users
+        handleDelete,
         currentItems,
         loading,            
         // componente: FormUsers

@@ -55,6 +55,7 @@
   margin: 1rem;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(255,255,255,.6);
+  color: #fff;
 }
 /* ------------------------------------------------------------------------------------- */
 /*  colores de las cards de los usuarios */
@@ -93,6 +94,6 @@
   .buttonPaginate__nigth button{
     padding: 0 0.8rem;
     margin-top: 3rem;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
   }
 }

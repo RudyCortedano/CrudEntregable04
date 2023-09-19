@@ -7,11 +7,11 @@
 }
 /* ----------------------------------------------------------------------------------- */
 /* navbar */
-.navbar__logo{
+.navbar__logo {
   font-size: 1.5rem;
-  transition: .3s;
+  transition: 0.3s;
 }
-.navbar__logo:active{
+.navbar__logo:active {
   transform: scale(1.2);
 }
 .navbar__infoSwitchInput {
@@ -68,9 +68,11 @@
   flex-direction: column;
   padding: 1rem;
   border-radius: 0.5rem;
+  font-weight: bold;
 }
 .form__global label {
   display: block;
+  margin-top: 0.5rem;
 }
 .form__global input {
   width: 300px;
@@ -88,14 +90,14 @@
   padding: 0.3rem 0.5rem;
   border-radius: 0.3rem;
   cursor: pointer;
-  margin: 0 .2rem;
+  margin: 0 0.2rem;
   border: none;
 }
-.form__btnUpdate{
-  background: #ACBCFF;
+.form__btnUpdate {
+  background: #acbcff;
 }
-.form__btnReset{
-  background: #FC4F00;
+.form__btnReset {
+  background: #fc4f00;
 }
 /* ----------------------------------------------------------------------------------- */
 /* usuarios */
@@ -108,7 +110,6 @@
   margin: 0 auto;
   gap: 1rem;
   margin-top: 7rem;
-  /* margin-bottom: 1rem; */
 }
 .user__general article {
   padding: 1rem;
@@ -119,15 +120,15 @@
 .user__item {
   margin: 0.1rem 0;
 }
-.user__form{
+.user__form {
   display: block;
-  color: lavender;  
+  color: lavender;
 }
-.user__name{
+.user__name {
   text-align: center;
   margin-bottom: 0.2rem;
 }
-.user__bold{
+.user__bold {
   font-weight: bold;
   font-size: 1.1rem;
   padding-left: 0.3rem;
@@ -136,9 +137,8 @@
   text-align: right;
   margin-top: 1rem;
 }
-.user__button button {
+.user__button label {
   padding: 0.3rem 1rem;
-  margin: 0 0.2rem;
   border: none;
   border-radius: 0.3rem;
   color: white;
@@ -147,7 +147,6 @@
 .user__buttonEdit {
   background: #004225;
   padding: 0.3rem 1rem;
-  margin: 0 0.2rem;
   border: none;
   border-radius: 0.3rem;
   color: white;
@@ -156,8 +155,60 @@
 .user__buttonDelete {
   background: red;
 }
-.user__bottom{
+.user__bottom {
   border-bottom: 1px solid #efefef7a;
+}
+/* ----------------------------------------------------------------------------------- */
+/* modal eliminar */
+.modalDelete {
+  display: none;
+}
+.modal__delete {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 101;
+}
+.modal__content {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid #fff;
+  text-align: center;
+}
+.modal__exit__position{
+  text-align: right;
+margin-bottom: 1rem;
+}
+.modal__exitBtn{
+  font-size: 1.5rem;
+}
+.modalDelete:checked ~ .modal__delete {
+  display: flex;
+}
+.modal__delete__position {
+  margin: 1.5rem 0;
+}
+.modal__btnDelete {
+  text-align: center;
+  background: red;
+  padding: 0.3rem 3rem;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  cursor: pointer;
+}
+.exit__modal__delete {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 /* ----------------------------------------------------------------------------------- */
 /* spinner de carga */
@@ -174,6 +225,6 @@
   gap: 0.5rem;
 }
 .switch__icon {
-  font-size: 1.5rem;  
+  font-size: 1.5rem;
 }
 /* ----------------------------------------------------------------------------------- */

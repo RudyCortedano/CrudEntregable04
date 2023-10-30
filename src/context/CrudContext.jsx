@@ -19,7 +19,7 @@ const CrudProvider = (props) => {
     getUsers("/users/");
   }, []);
   // -------------------------------------------------------------------------------------------------//
-  // libreria useForm global para controlar inputs y setiar campos desde las card
+  // libreria useForm global para controlar inputs y setiar campos desde las card.
   const { register, handleSubmit, reset } = useForm();
   const [userID, setUserID] = useState()
 

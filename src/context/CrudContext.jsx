@@ -8,17 +8,18 @@ const CrudProvider = (props) => {
   // -------------------------------------------------------------------------------------------------//
   // logica del  CRUD
   const [updateInfo, setUpdateInfo] = useState();
-  const baseUrl = `https://users-crud.academlo.tech`;
-  const [users, getUsers, createUser, deleteUsers, updateUsers, loading] =
-    useFetch(baseUrl);
+
+  // const baseUrl = `https://users-crud.academlo.tech`;  //? API Usada en el modulo de front-end
+  const baseUrl = `https://users-api-dev-rhxt.3.us-1.fl0.io`; //? API Creada en el modulo de back-end
+
+    // hook personalizado para la realizacion del CRUD
+  const [users, getUsers, createUser, deleteUsers, updateUsers, loading] = useFetch(baseUrl);
 
   useEffect(() => {
     getUsers("/users/");
   }, []);
   // -------------------------------------------------------------------------------------------------//
-  //  usaremos el reset globalmente para llenar los campos con la informacion ya que updateInfo
-  //  presento un bug de dejar vacio los campos cuando entras para editar reseteas los campos
-  //  te sales del formulario-modal dejandolo vacio y vuelves a editar el mismo usuario.
+  // libreria useForm global para controlar inputs y setiar campos desde las card
   const { register, handleSubmit, reset } = useForm();
   const [userID, setUserID] = useState()
 
@@ -44,6 +45,7 @@ const CrudProvider = (props) => {
   const handleChecked = () => {
     setChecked(!checked);
   };
+  console.log(checked)
   // -------------------------------------------------------------------------------------------------//
   // logica del paginado
   const itemsPerPage = 8;

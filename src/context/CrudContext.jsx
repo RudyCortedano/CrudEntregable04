@@ -10,7 +10,7 @@ const CrudProvider = (props) => {
   const [updateInfo, setUpdateInfo] = useState();
 
   // const baseUrl = `https://users-crud.academlo.tech`;  //? API Usada en el modulo de front-end
-  const baseUrl = `https://users-api-dev-rhxt.3.us-1.fl0.io`; //? API Creada en el modulo de back-end
+  const baseUrl = `https://users-dev-hfnd.3.us-1.fl0.io`; //? API Creada en el modulo de back-end
 
     // hook personalizado para la realizacion del CRUD
   const [users, getUsers, createUser, deleteUsers, updateUsers, loading] = useFetch(baseUrl);

@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------------------------- */
 /* estilos generales nigth*/
-.body__nigth{
+.body__nigth {
   background-image: url(https://lastrafoto.com/wp-content/uploads/2019/07/NOC03_full-1.jpg);
   background-size: cover;
   background-position: 0 0;
@@ -11,18 +11,18 @@
   overflow-y: scroll;
   color: white;
 }
-.body__nigth::-webkit-scrollbar{
+.body__nigth::-webkit-scrollbar {
   width: 1rem;
 }
-.body__nigth::-webkit-scrollbar-thumb{
-  background: #B39CD0;
+.body__nigth::-webkit-scrollbar-thumb {
+  background: #b39cd0;
   border-radius: 100vh;
 }
 /* ------------------------------------------------------------------------------------- */
 /* navbar nigth */
-.navbar__nigth{
-  background: rgba(0,0,0,.6);
-  box-shadow: 0 0 10px rgba(255,255,255,.6);
+.navbar__nigth {
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
   color: white;
   border-bottom: 1px solid #fff;
   display: flex;
@@ -31,57 +31,55 @@
   height: 70px;
   padding: 0 3rem;
   position: fixed;
-  top: 0;
-  left: 0;
-  left: 1rem;
+  width: 100%;
   z-index: 3;
 }
-.navbar__btnNigth{
+.navbar__btnNigth {
   padding: 0.5rem 1.2rem;
   border-radius: 0.3rem;
   background: darkslateblue;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
-.navbar__btnNigth:hover{  
-  background: #B39CD0;
+.navbar__btnNigth:hover {
+  background: #b39cd0;
   box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #fff;
 }
 /* ------------------------------------------------------------------------------------- */
 /* form__nigth */
-.form__night{
-  background: rgba(0,0,0,.3);
+.form__night {
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(20px);
   margin: 0 auto;
   width: fit-content;
   margin: 1rem;
   padding: 1rem;
-  box-shadow: 0 0 10px rgba(255,255,255,.6);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
   color: #fff;
 }
 /* ------------------------------------------------------------------------------------- */
 /*  colores de las cards de los usuarios */
-.user__nigth{
-  box-shadow: 0 0 10px rgba(255,255,255,.6);
-  background: rgba(0,0,0,.4);
+.user__nigth {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
-  color: white;  
+  color: white;
 }
 /* ------------------------------------------------------------------------------------- */
 /*  paginacion day */
-.buttonPaginate__nigth button{
+.buttonPaginate__nigth button {
   padding: 0 1rem;
-  margin: 0 .2rem;
-  background: rgba(255,255,255,.6);
+  margin: 0 0.2rem;
+  background: rgba(255, 255, 255, 0.6);
   box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #fff;
   backdrop-filter: blur(25px);
   margin-bottom: 3rem;
   color: white;
   font-weight: bold;
   margin-top: 7rem;
-  transition: .3s;
+  transition: 0.3s;
 }
-.buttonPaginate__nigth button:active{
+.buttonPaginate__nigth button:active {
   transform: scale(0.8);
 }
 @media (max-width: 800px) {
@@ -89,11 +87,11 @@
     width: 0;
   }
 }
-@media(max-width: 500px){
-  .navbar__nigth{
+@media (max-width: 500px) {
+  .navbar__nigth {
     justify-content: space-evenly;
   }
-  .buttonPaginate__nigth button{
+  .buttonPaginate__nigth button {
     padding: 0 0.8rem;
     margin-top: 3rem;
     margin-bottom: 4rem;
